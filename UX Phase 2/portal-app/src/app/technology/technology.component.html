@@ -1,0 +1,59 @@
+<html>
+  <head>
+      <style type="text/css">
+        body{
+          background-image: url("/assets/desk.jpg");
+          min-height: 800px;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+        }
+        th{
+      color: whitesmoke;
+    }
+    td{
+      color: black;
+    }
+    table{
+      font-size: 17px;
+      margin: 250px;
+      margin-top: 10px;
+    }
+    h1{
+      font-size: 30px;
+    }
+      </style>
+
+  </head>
+  <body>
+
+  
+
+<div class="col-md-6">
+    <u style="color: blue"><h1 align="right"> Technology Details</h1></u>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Technology Name</th>
+      <th>Description</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let technology of technologys">
+      <td>{{technology.id}}</td>
+      <td>{{technology.techName}}</td>
+      <td>{{technology.description}}</td>
+      <td>{{technology.createdAt | date}}</td>
+      <td>{{technology.updatedAt | date}}</td>
+      <td><button class="btn btn-danger" (click)="deleteTechnology(technology)"> Delete Technology</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>

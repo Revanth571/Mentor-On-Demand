@@ -1,0 +1,58 @@
+<html>
+  <head>
+      <style type="text/css">
+        body{
+          background-image: url("/assets/desk.jpg");
+          min-height: 800px;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+        }
+        th{
+      color: whitesmoke;
+    }
+    td{
+      color: black;
+    }
+    table{
+      font-size: 17px;
+      margin: 250px;
+      margin-top: 10px;
+    }
+    h1{
+      font-size: 30px;
+    }
+      </style>
+  </head>
+  <body>
+
+<div class="col-md-6">
+    <u style="color: blue"><h1 align="right"> Skill Details</h1></u>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Prerequisites</th>
+      <th>TOC</th>
+      <th>Created At</th>
+      <th>Updated At</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let skill of skills">
+      <td>{{skill.id}}</td>
+      <td>{{skill.name}}</td>
+      <td>{{skill.prerequisites}}</td>
+      <td>{{skill.toc}}</td>
+      <td>{{skill.createdAt}}</td>
+      <td>{{skill.updatedAt}}</td>
+      <td><button class="btn btn-danger" (click)="deleteSkill(skill)"> Delete Skill</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>

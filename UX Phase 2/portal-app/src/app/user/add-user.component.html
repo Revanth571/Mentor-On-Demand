@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+
+}
+
+
+input[type=text], input[type=password], input[type=mobile] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid lightblue;
+  background: #f1f1f1;
+}
+
+input[type=text1]{
+  width: auto;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid lightblue;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus , input[type=mobile]:focus{
+  background-color: #ddd;
+  
+  border-color: lightblue;
+}
+
+input[type=text1]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+body{
+          background-image: url("/assets/desk.jpg");
+          min-height: 800px;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 1150px;
+    
+        }
+        div,button{
+    font-size: 17px;
+    margin-left: 200px;
+  }
+       
+</style>
+</head>
+<body>
+
+<form style="border-color:#4CAF50">
+  <div class="col-md-6">
+      <u style="color: blue"><h1 class="text-center">Add User</h1></u>
+<form>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input [(ngModel)]="user.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+  </div>
+
+  <div class="form-group">
+    <label for="userName">User Name:</label>
+    <input type="userName" [(ngModel)]="user.userName" placeholder="userName" name="userName" class="form-control" id="userName">
+</div>
+
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" [(ngModel)]="user.password" placeholder="password" name="password" class="form-control" id="password">
+</div>
+
+<div class="form-group">
+    <label for="contactNumber">Contact No:</label>
+    <input type="text" [(ngModel)]="user.contactNumber" placeholder="Contact Number" name="contactNumber" class="form-control" id="contactNumber">
+</div>
+
+<div class="form-group">
+  <label for="regCode">Reg. Code</label>
+  <input type="text" [(ngModel)]="user.regCode" placeholder="Registration Code" name="regCode" class="form-control" id="regCode">
+</div>
+
+<div class="form-group">
+  <label for="role">Role</label>
+  <input type="text" [(ngModel)]="user.role" placeholder="Role " name="role" class="form-control" id="role">
+</div>
+
+<div class="form-group">
+  <label for="linkedinUrl">LinkedIn Url</label>
+  <input type="text" [(ngModel)]="user.linkedinUrl" placeholder="linkedinUrl " name="linkedinUrl" class="form-control" id="linkedinUrl">
+</div>
+
+<div class="form-group">
+  <label for="yearsofExperience">Years of Experience</label>
+  <input type="text" [(ngModel)]="user.yearsofExperience" placeholder="0,1,2 etc. " name="yearsofExperience" class="form-control" id="yearsofExperience">
+</div>
+
+  <button class="btn btn-success" (click)="createUser()"><a routerLink="/admin#database">Create</a> </button>
+</form>
+</div>
+
+  </form>
+    
+</body>
+</html>

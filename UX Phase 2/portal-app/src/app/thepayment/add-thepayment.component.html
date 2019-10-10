@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+  <h1 align="center"><b>Payment</b></h1>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form>
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+
+          
+
+            <label for="full_name"><i class="fa fa-user"></i> Full Name</label>
+            <input [(ngModel)]="thepayment.full_name" type="text" id="full_name" name="full_name" placeholder="Revanth Nani">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input [(ngModel)]="thepayment.email" type="text" id="email" name="email" placeholder="revanth@gmail.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input [(ngModel)]="thepayment.address" type="text" id="adr" name="address" placeholder="flat/street/city">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input [(ngModel)]="thepayment.city" type="text" id="city" name="city" placeholder="Bangalore">
+
+
+
+            <div class="form-group">
+                <label for="created_at"><i class="fa fa-clock-o"></i>  created_at:</label>
+                <input style="padding: 25px" [(ngModel)]="thepayment.createdAt" placeholder="created_at" name="created_at" class="form-control" id="created_at">
+              </div>
+            
+              <div class="form-group">
+                <label for="updated_at"><i class="fa fa-clock-o"></i>  updated_at:</label>
+                <input style="padding: 25px" [(ngModel)]="thepayment.updatedAt" placeholder="updated_at" name="updated_at" class="form-control" id="updated_at">
+              </div>
+
+
+
+
+
+
+
+
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input [(ngModel)]="thepayment.state" type="text" id="state" name="state" placeholder="Bglr">
+              </div>
+              <div class="col-50">
+                <label for="name_on_card">nameOnCard</label>
+                <input [(ngModel)]="thepayment.name_on_card" type="text" id="name_on_card" name="name_on_card" placeholder="revanth">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="credit_card_number"><i class="fa fa-credit-card"></i> creditCardNumber</label>
+            <input [(ngModel)]="thepayment.credit_card_number" type="text" id="credit_card_number" name="credit_card_number" placeholder="**** **** **** **** ">
+            <label for="exp_month"><i class="fa fa-calendar"></i>  Exp Month</label>
+            <input [(ngModel)]="thepayment.exp_month" type="text" id="exp_month" name="exp_month" placeholder="04">
+            <label for="exp_year"><i class="fa fa-calendar"></i>   Exp Year</label>
+            <input [(ngModel)]="thepayment.exp_year" type="text" id="exp_year" name="exp_year" placeholder="2019">
+            <div class="row">
+              
+              <div class="col-50">
+                <label for="cvv"><i class="fa fa-credit-card"></i>  CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="***">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <input type="submit" (click)="createThePayment()" value="Submit" class="btn" style="width: auto">
+      </form>
+    </div>
+  </div>
+  
+</div>
+
+</body>
+</html>

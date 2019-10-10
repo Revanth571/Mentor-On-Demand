@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+body{
+			
+			min-height: 800px;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+		}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+</style>
+</head>
+<body style="background-image: url(data:image/jpeg;base64,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)">
+  <h1><a id="o" href="javascript:history.back()">Back</a></h1>
+<h2 style="text-align:center">Trainer Profile</h2>
+
+<div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf_Bf0-x44hsGqqcQwrTcNeLUSnYjlDuoql-hQHydDdBwxeCT2" alt="you" style="width:100%">
+  <h1 id="j"></h1>
+  <p class="title">PTA</p>
+  <p>Cogizant</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+
+</body>
+</html>

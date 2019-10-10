@@ -1,0 +1,62 @@
+<html>
+  <head>
+      <style type="text/css">
+        body{
+          background-image: url("/assets/desk.jpg");
+          min-height: 800px;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+        }
+       
+    div,button{
+      font-size: 17px;
+      margin-left: 200px;
+    }
+    h1{
+      font-size: 40px;
+    }
+    input{
+      padding: 20px;
+    }
+    
+      </style>
+  </head>
+  <body>
+
+<div class="col-md-6">
+    <u style="color: blue"> <h1 class="text-center">Add Skill</h1></u>
+<form>
+  <div class="form-group">
+    <label for="ename">Name:</label>
+    <input type="text" [(ngModel)]="skill.name" placeholder="Name" name="name" class="form-control" id="name">
+  </div>
+
+  <div class="form-group">
+    <label for="toc">Toc:</label>
+    <input [(ngModel)]="skill.toc" placeholder="Toc" name="toc" class="form-control" id="toc">
+  </div>
+
+  <div class="form-group">
+    <label for="prerequisites">Prerequisites:</label>
+    <input [(ngModel)]="skill.prerequisites" placeholder="Prerequisites" name="prerequisites" class="form-control" id="prerequisites">
+  </div>
+
+  <div class="form-group">
+    <label for="created_at">created_at:</label>
+    <input [(ngModel)]="skill.createdAt" placeholder="created_at" name="created_at" class="form-control" id="created_at">
+  </div>
+
+  <div class="form-group">
+    <label for="updated_at">updated_at:</label>
+    <input [(ngModel)]="skill.updatedAt" placeholder="updated_at" name="updated_at" class="form-control" id="updated_at">
+  </div>
+
+ 
+
+  <button class="btn btn-success" (click)="createSkill()">Create</button>
+</form>
+</div>
+</body>
+</html>

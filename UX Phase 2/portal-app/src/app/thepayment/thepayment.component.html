@@ -1,0 +1,71 @@
+<html>
+  <head>
+      <style type="text/css">
+        body{
+          background-image: url("/assets/desk.jpg");
+          min-height: 800px;
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+        }
+        th{
+      color: whitesmoke;
+    }
+    td{
+      color: black;
+    }
+    table{
+      font-size: 17px;
+      margin: 50px;
+      margin-top: 10px;
+    }
+    h1{
+      font-size: 30px;
+    }
+      </style>
+
+  </head>
+  <body>
+
+      <h1><a id="o" href="javascript:history.back()">Back</a></h1>
+
+<div class="col-md-6">
+    <u style="color: blue"><h1 align="right"> Payment Details</h1></u>
+  
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>fullName</th>
+      <th>email</th>
+      <th>address</th>
+      <th>city</th>
+      <th>state</th>
+      <th>nameOnCard</th>
+      <th>creditCardNumber</th>
+      <th>expMonth</th>
+      <th>expYear</th>
+      <th>cvv</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let thepayment of thepayments">
+        <td>{{thepayment.id}}</td>
+      <td>{{thepayment.full_name}}</td>
+      <td>{{thepayment.email}}</td>
+      <td>{{thepayment.address}}</td>
+      <td>{{thepayment.city}}</td>
+      <td>{{thepayment.state}}</td>
+      <td>{{thepayment.name_on_card}}</td>
+      <td>{{thepayment.credit_card_number}}</td>
+      <td>{{thepayment.exp_month}}</td>
+      <td>{{thepayment.exp_year}}</td>
+      <td>{{thepayment.cvv}}</td>
+      <td><button class="btn btn-danger" (click)="deleteThePayment(thepayment)"> Delete transaction</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>

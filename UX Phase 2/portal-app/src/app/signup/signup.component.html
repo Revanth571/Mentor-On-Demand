@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 16px;
+  background-color: white;
+
+}
+
+
+input[type=text], input[type=password], input[type=mobile] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid lightblue;
+  background: #f1f1f1;
+}
+
+input[type=text1]{
+  width: auto;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 1px solid lightblue;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus , input[type=mobile]:focus{
+  background-color: #ddd;
+  
+  border-color: lightblue;
+}
+
+input[type=text1]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+
+
+a {
+  color: dodgerblue;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm0xAWVOJZhy0E8BfJ-ihDUf9YVUXCxZpxaJkIO07zbvRUethBug" style="background-repeat: no-repeat" style="background-attachment: fixed" style="background-size: cover">
+
+ 
+  <form style="border: 1px solid goldenrod">
+    <div class="container text-center">
+
+        <h3 align="right"><a id="a" routerLink="/signin" style="color:green" > User Login..</a></h3>
+        <h3 align="right"><a id="a" routerLink="/adminn" style="color:red" > Admin Login</a></h3>
+      
+
+     <b> <strong><h1>User Registraion</h1></strong></b>
+    <hr>
+    
+      <form>
+      <div class="form-group">
+        <label for="email">Email address:</label><br>
+        <input style="width: 500px; height:40px" type="text" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="userName">Username:</label><br>
+        <input style="width: 500px; height:40px" type="text" [(ngModel)]="user.userName" placeholder="Username" name="userName" class="form-control" id="userName"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="firstName">First Name:</label><br>
+        <input style="width: 500px; height:40px" type="text" [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="lastName">Last Name:</label><br>
+        <input style="width: 500px; height:40px" type="text" [(ngModel)]="user.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label><br>
+        <input style="width: 500px; height:40px" type="password" [(ngModel)]="user.password" placeholder="Password" name="password" class="form-control" id="password"><br>
+      </div>
+  
+      <div class="form-group">
+        <label for="contactNumber">Contact No:</label><br>
+        <input style="width: 500px; height:40px" type="text" [(ngModel)]="user.contactNumber" placeholder="Contact Number" name="contactNumber" class="form-control" id="contactNumber"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="regCode">Reg. Code</label><br>
+        <input style="width: 500px; height:40px" type="text" [(ngModel)]="user.regCode" placeholder="Registration Code" name="regCode" class="form-control" id="regCode"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="linkedinUrl">Linked In Url</label><br>
+        <input style="width: 500px; height:40px" type="text" [(ngModel)]="user.linkedinUrl" placeholder="Linked In Url " name="linkedinUrl" class="form-control" id="linkedinUrl"><br>
+      </div>
+      
+      <div class="form-group">
+        <label for="yearsofExperience">Years of Experience</label><br>
+        <input style="width: 500px; height:40px" type="text" [(ngModel)]="user.yearsofExperience" placeholder="0,1,2 etc. " name="yearsofExperience" class="form-control" id="yearsofExperience"><br>
+      </div>
+  
+      <p style="color:white; ">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+      <div class="clearfix">
+      <button class="btn btn-success" id="signupbtn" (click)="createUser()">SignUp</button>
+      </div>
+      </form>
+
+      <p>©Copyright from MentorOnDemand.com</p>
+  </div>
+  </form>
+    
+</body>
+</html>

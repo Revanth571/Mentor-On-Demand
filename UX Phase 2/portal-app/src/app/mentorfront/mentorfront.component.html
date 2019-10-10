@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+  	body{
+			background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ2aY3H1Zc6yIXwQ7xfHCtG-hm7zQOa_-qqfACcjDLvRz5pBSizA");
+			min-height: 800px;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+		}
+  </style>
+
+</head>
+<body  >
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<li class="dropdown" style="margin: 15px" ><a href="dropdown-toggle" data-toggle="dropdown" href="#" >Mentor<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href routerLink="/mentorprofile">Profile</a></li>
+					</ul>
+				</li>
+			</div>	
+			
+
+			<ul class="nav navbar-nav inline" style="display: contents">
+				<li class="active"><a href routerLink="/front">Home</a></li>
+
+				<li class="dropdown"><a href="dropdown-toggle" data-toggle="dropdown" href="#">courses<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="https://www.w3schools.com/java/">Java</a></li>
+					<li><a href="https://www.w3schools.com/sql/">SQL</a></li>
+					<li><a href="https://www.w3schools.com/html/">HTML</a></li>
+					<li><a href="https://www.w3schools.com/bootstrap/">BootStrap</a></li>
+					</ul>
+				</li>
+
+				<li><a routerLink="/current1">CurrentTrainings</a></li>
+				<li><a routerLink="/training1">Completed Trainings</a></li>
+				
+				
+
+
+			</ul>
+
+			<ul class="nav navbar-nav inline navbar-right" style="display: contents">
+      		<li><a routerLink="/mentorfront"><span class="glyphicon glyphicon-user"></span> Notification</a></li>
+			  <li> <a routerLink="" (click)="logout()"><span class="glyphicon glyphicon-log-out" ></span>Logout</a></li>
+
+    		</ul>
+
+			<form class="navbar-form navbar-right" action="">
+				<div class="input-group">
+					<input type="text" name="search" class="form-control" placeholder="search">
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search "></i>
+						</button>
+					</div>
+				</div>
+
+			</form>
+
+			
+
+		</div>
+	</nav>
+
+	<h1 align="center" style="color:darkgoldenrod"><b>Welcome</b></h1>
+	<h1 align="center" style="color:darkgoldenrod" id="j"><b></b></h1>
+
+	<br>
+	<br>
+	<br>
+	
+	<h4 align="center" style="color: whitesmoke">Our on-demand training platform gives you access hundreds</h4><h4 align="center" style="color: whitesmoke"> of hours of on-demand training in short, topical lessons, </h4><h4 align="center" style="color: whitesmoke"> videos, knowledge assessments, and interactive virtual lab exercises.
+
+	</h4>
+
+</body>
+</html>
